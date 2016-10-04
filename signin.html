@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Vodqa Shots title</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="js/signin.js" charset="utf-8"></script>
+    <style>
+      #errorMessage {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signin container">
+      <form class="row" onsubmit="return validate();">
+        <div class="col-md-6 col-md-offset-3">
+          <h1 class="text-center primary">Login</h1>
+          <div id="errorMessage" class="alert alert-warning alert-dismissible fade in"></div>
+          <br>
+          <label for="username">UserName: </label>
+          <input type="text" id="userName" class="form-control" required="" placeholder="username"/>
+          <br>
+          <label for="password">Password: </label>
+          <input type="password" id="password" class="form-control" required="" placeholder="password"/>
+          <br>
+          <center>
+            <button class="btn btn-info">Login</button>
+          </center>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
