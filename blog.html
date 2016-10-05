@@ -2,7 +2,8 @@
   <head>
     <title>Blog</title>
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js" charset="utf-8"></script>
     <script src="js/blog.js" charset="utf-8"></script>
     <style>
     .form-action {
@@ -17,53 +18,63 @@
       margin-top: 20px;
       display: none;
     }
+
+    #accordion {
+      margin-top: 80px;
+    }
     </style>
   </head>
   <body>
     <div class="profile container">
-      <form class="row" onsubmit="return validate();" onreset="resetting();">
-        <div class="col-md-6 col-md-offset-3">
-          <h1 class="text-center text-info">Blog</h1>
-          <label for="name">Name: </label>
-          <input type="text" id="name" class="form-control"/>
-          <br />
-          <label for="age">Age: (*age should be between 20 to 80)</label>
-          <input type="number" id="age" class="form-control" placeholder="20 to 80"/>
-          <br />
-          <div class="experience">
-            <label for="experience">Experience:</label>
+      <div class="row">
+        <form class="col-md-6 col-md-offset-1" onsubmit="return validate();" onreset="resetting();">
+          <div class="">
+            <h1 class="text-center text-info">Blog</h1>
+            <label for="name">Name: </label>
+            <input type="text" id="name" class="form-control"/>
+            <br />
+            <label for="age">Age: (*age should be between 20 to 80)</label>
+            <input type="number" id="age" class="form-control" placeholder="20 to 80"/>
+            <br />
+            <div class="experience">
+              <label for="experience">Experience:</label>
+              <br>
+              <label for="experience">0-3</label>
+              <input type="radio" name="experience" value="0-3">
+              <label for="experience">3-7</label>
+              <input type="radio" name="experience" value="3-7">
+              <label for="experience">7-15</label>
+              <input type="radio" name="experience" value="7-15">
+              <label for="experience">15+</label>
+              <input type="radio" name="experience" value="15+">
+            </div>
+            <br />
+            <label for="blogarea">Blog Area (* 180 characters limit)</label>
+            <textarea name="blogarea" id="blogArea" rows="8" cols="40" class="form-control" placeholder="180 characters limit"></textarea>
             <br>
-            <label for="experience">0-3</label>
-            <input type="radio" name="experience" value="0-3">
-            <label for="experience">3-7</label>
-            <input type="radio" name="experience" value="3-7">
-            <label for="experience">7-15</label>
-            <input type="radio" name="experience" value="7-15">
-            <label for="experience">15+</label>
-            <input type="radio" name="experience" value="15+">
+            <div class="profession">
+              <h3 for="profession">Profession</h3>
+              <select class="professionSel form-control" id="profession" name="profession" onchange="professionSelected(this)">
+                <option value="Engineer">Engineer</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Business">Business</option>
+                <option value="other">other</option>
+              </select>
+              <input type="text" class="form-control" placeholder="Profession" name="otherProfession" id="otherProfession" value="" />
+            </div>
+            <br>
+            <div class="form-action">
+              <button type="reset" name="button" class="btn btn-warning">Reset</button>
+              <button type="submit" name="button" class="btn btn-info">Save</button>
+            </div>
           </div>
-          <br />
-          <label for="blogarea">Blog Area (* 180 characters limit)</label>
-          <textarea name="blogarea" id="blogArea" rows="8" cols="40" class="form-control" placeholder="180 characters limit"></textarea>
-          <br>
-          <div class="profession">
-            <h3 for="profession">Profession</h3>
-            <select class="professionSel form-control" id="profession" name="profession" onchange="professionSelected(this)">
-              <option value="Engineer">Engineer</option>
-              <option value="Doctor">Doctor</option>
-              <option value="Teacher">Teacher</option>
-              <option value="Business">Business</option>
-              <option value="other">other</option>
-            </select>
-            <input type="text" class="form-control" placeholder="Profession" name="otherProfession" id="otherProfession" value="" />
-          </div>
-          <br>
-          <div class="form-action">
-            <button type="reset" name="button" class="btn btn-warning">Reset</button>
-            <button type="submit" name="button" class="btn btn-info">Save</button>
-          </div>
+        </form>
+
+        <div class="panel-group col-md-5" id="accordion" role="tablist" aria-multiselectable="true">
+
         </div>
-      </form>
+      </div>
     </div>
   </body>
 </html>
