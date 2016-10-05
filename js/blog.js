@@ -5,5 +5,10 @@ function validate() {
 }
 
 function resetting() {
-  console.log("resetting")
+  var $otherProfession = $("#otherChk");
+  if($otherProfession.prop('checked')) {
+    setTimeout(function() {
+      $otherProfession.prop('checked', true);
+    }, 50);
+  }
 }

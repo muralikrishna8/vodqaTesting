@@ -2,6 +2,7 @@
   <head>
     <title>Blog</title>
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="js/blog.js" charset="utf-8"></script>
     <style>
     .form-action {
@@ -38,21 +39,21 @@
           <br>
           <div class="profession">
             <h3 for="profession">Profession</h3>
-            <input type="checkbox" name="engineer" value="engineer">
+            <input type="checkbox" id="engineerChk" name="engineer" value="engineer">
             <label for="engineer">Engineer</label>
             <br />
-            <input type="checkbox" name="doctor" value="doctor">
+            <input type="checkbox" id="doctorChk" name="doctor" value="doctor">
             <label for="doctor">Doctor</label>
             <br />
 
-            <input type="checkbox" name="teacher" value="teacher">
+            <input type="checkbox" id="teacherChk" name="teacher" value="teacher">
             <label for="teacher">Teacher</label>
             <br />
 
-            <input type="checkbox" name="business" value="business">
+            <input type="checkbox" id="businessChk" name="business" value="business">
             <label for="business">Business</label>
             <br />
-            <input type="checkbox" name="other" value="other">
+            <input type="checkbox" id="otherChk" name="other" value="other">
             <label for="other">Other</label>
           </div>
           <br>
