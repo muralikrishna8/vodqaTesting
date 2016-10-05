@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="js/blog.js" charset="utf-8"></script>
+    <style>
+    .form-action {
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="profile container">
+      <form class="row" onsubmit="return validate();" onreset="resetting();">
+        <div class="col-md-6 col-md-offset-3">
+          <h1 class="text-center text-info">Blog</h1>
+          <label for="name">Name: </label>
+          <input type="text" id="name" class="form-control"/>
+          <br />
+          <label for="age">Age: (*age should be between 20 to 80)</label>
+          <input type="number" id="age" class="form-control" placeholder="20 to 80"/>
+          <br />
+          <div class="experience">
+            <label for="experience">Experience:</label>
+            <br>
+            <label for="experience">0-3</label>
+            <input type="radio" name="experience" value="0-3">
+            <label for="experience">3-7</label>
+            <input type="radio" name="experience" value="3-7">
+            <label for="experience">7-15</label>
+            <input type="radio" name="experience" value="7-15">
+            <label for="experience">15+</label>
+            <input type="radio" name="experience" value="15+">
+          </div>
+          <br />
+          <label for="blogarea">Blog Area (* 180 characters limit)</label>
+          <textarea name="blogarea" id="blogArea" rows="8" cols="40" class="form-control" placeholder="180 characters limit"></textarea>
+          <br>
+          <div class="profession">
+            <h3 for="profession">Profession</h3>
+            <input type="checkbox" name="engineer" value="engineer">
+            <label for="engineer">Engineer</label>
+            <br />
+            <input type="checkbox" name="doctor" value="doctor">
+            <label for="doctor">Doctor</label>
+            <br />
+
+            <input type="checkbox" name="teacher" value="teacher">
+            <label for="teacher">Teacher</label>
+            <br />
+
+            <input type="checkbox" name="business" value="business">
+            <label for="business">Business</label>
+            <br />
+            <input type="checkbox" name="other" value="other">
+            <label for="other">Other</label>
+          </div>
+          <br>
+          <div class="form-action">
+            <button type="reset" name="button" class="btn btn-warning">Reset</button>
+            <button type="submit" name="button" class="btn btn-info">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
