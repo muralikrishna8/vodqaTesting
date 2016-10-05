@@ -8,6 +8,15 @@
     .form-action {
       text-align: center;
     }
+
+    .experience input {
+      margin-right: 20px;
+    }
+
+    #otherProfession {
+      margin-top: 20px;
+      display: none;
+    }
     </style>
   </head>
   <body>
@@ -39,22 +48,14 @@
           <br>
           <div class="profession">
             <h3 for="profession">Profession</h3>
-            <input type="checkbox" id="engineerChk" name="engineer" value="engineer">
-            <label for="engineer">Engineer</label>
-            <br />
-            <input type="checkbox" id="doctorChk" name="doctor" value="doctor">
-            <label for="doctor">Doctor</label>
-            <br />
-
-            <input type="checkbox" id="teacherChk" name="teacher" value="teacher">
-            <label for="teacher">Teacher</label>
-            <br />
-
-            <input type="checkbox" id="businessChk" name="business" value="business">
-            <label for="business">Business</label>
-            <br />
-            <input type="checkbox" id="otherChk" name="other" value="other">
-            <label for="other">Other</label>
+            <select class="professionSel form-control" id="profession" name="profession" onchange="professionSelected(this)">
+              <option value="Engineer">Engineer</option>
+              <option value="Doctor">Doctor</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Business">Business</option>
+              <option value="other">other</option>
+            </select>
+            <input type="text" class="form-control" placeholder="Profession" name="otherProfession" id="otherProfession" value="" />
           </div>
           <br>
           <div class="form-action">
