@@ -68,5 +68,12 @@ function validate() {
 }
 
 function resetting() {
-
+  var otherVal = $("#otherProfession").val();
+  var selectVal = $("#profession").val();
+  setTimeout(function(){
+    if(selectVal === "other") {
+      $('#profession option[value="other"]').prop("selected", true);
+    }
+    $("#otherProfession").val(otherVal);
+  });
 }
