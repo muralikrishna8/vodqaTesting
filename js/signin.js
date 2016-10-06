@@ -3,6 +3,7 @@ function validate() {
   var password = document.getElementById("password").value;
 
   if(username === "admin" && (password === "admin" || password === "Admin")) {
+    localStorage.setItem("loggedOutVodqa", 0);
     window.location.href = "blog.html";
   } else {
     var $errMsg = document.getElementById("errorMessage");
@@ -11,4 +12,9 @@ function validate() {
   }
 
   return false;
+}
+
+if(localStorage.getItem("loggedOutVodqa") === '1') {
+  document.getElementById("userName").value = "admin";
+  document.getElementById("password").value = "admin";
 }

@@ -24,4 +24,9 @@ $(document).ready(function() {
     $panel.append($panelBodyContainer)
     $accordion.append($panel);
   });
+
+  $("#logout").click(function() {
+    localStorage.setItem("loggedOutVodqa", 1);
+    window.location.href = "/signin.html";
+  });
 });

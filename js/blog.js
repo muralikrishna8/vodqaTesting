@@ -51,3 +51,10 @@ function resetting() {
     $("#otherProfession").val(otherVal);
   });
 }
+
+$(document).ready(function() {
+  $("#logout").click(function() {
+    localStorage.setItem("loggedOutVodqa", 1);
+    window.location.href = "/signin.html";
+  });
+})
