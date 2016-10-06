@@ -7,6 +7,10 @@
     <script src="bootstrap-3.3.7-dist/js/bootstrap.js" charset="utf-8"></script>
     <script src="js/blog.js" charset="utf-8"></script>
     <style>
+    body {
+      margin-top: 40px;
+    }
+
     .form-action {
       text-align: center;
     }
@@ -26,9 +30,13 @@
     </style>
   </head>
   <body>
-    <div class="profile container">
+    <div class="profile container-fluid">
+      <div class="col-md-3 col-md-offset-9 col-sm-3 col-sm-offset-9 col-xs-6 col-xs-offset-6">
+        <a href="/blogs.html" class="btn btn-sm btn-info">Blogs</a>
+        <a href="/signin.html" class="btn btn-sm btn-warning">Logout</a>
+      </div>
       <div class="row">
-        <form class="col-md-6 col-md-offset-1" onsubmit="return validate();" onreset="resetting();">
+        <form class="col-md-6 col-md-offset-3" onsubmit="return validate();" onreset="resetting();">
           <div class="">
             <h1 class="text-center text-info">Blog</h1>
             <label for="name">Name: </label>
