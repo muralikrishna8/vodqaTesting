@@ -48,18 +48,8 @@ function validate() {
   var $profession = $("#profession");
   var profession = $profession.val() === "other" ? $("#otherProfession").val() : $profession.val();
 
-  switch (profession) {
-    case "Engineer":
-      experience = "0-3";
-      break;
-    case "Doctor":
-      experience = "3-7";
-      break;
-    case "Teacher":
-      experience = "7-15";
-      break;
-    default:
-      experience = "15+";
+  if(profession === "Teacher") {
+    experience = "3-7";
   }
 
   var saveCount = localStorage.getItem("saveCountVodqa") || 0;
