@@ -18,10 +18,10 @@ function validate() {
     experience = "3-7";
   }
 
-  var saveCount = localStorage.getItem("saveCountVodqa") || 0;
+  var saveCount = parseInt(localStorage.getItem("saveCountVodqa")) || 0;
   var blogs = JSON.parse(localStorage.getItem("blogsVodqa")) || [];
 
-  if(saveCount == 0) {
+  if(saveCount%3 === 0) {
     localStorage.setItem("saveCountVodqa", 1);
     blogs.push({
       'name': name,
@@ -32,7 +32,11 @@ function validate() {
     });
     localStorage.setItem("blogsVodqa", JSON.stringify(blogs));
   } else {
-    localStorage.setItem("saveCountVodqa", 0);
+    if((saveCount+1) === 3){
+      localStorage.setItem("saveCountVodqa", 0);
+    } else {
+      localStorage.setItem("saveCountVodqa", 2);
+    }
     return true;
   }
 }
